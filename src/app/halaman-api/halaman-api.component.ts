@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Route, Router } from '@angular/router';
 import { APIService } from '../api.service';
 
 @Component({
@@ -11,21 +12,28 @@ export class HalamanAPIComponent implements OnInit {
   ISIapi: any;
   selectedValue: string='';
 
-  constructor(private http:HttpClient, private dataservice:APIService) { }
+  constructor(private route:Router,  private http:HttpClient, private dataservice:APIService) { }
 
   ngOnInit(): void {
     this.LoadApi()
     // this.dataservice.loadAPI()
   }
 
+  gotoMain() {
+    this.route.navigate(['']);
+  }
 
 LoadApi(){
 
 
-    this.http.get(this.dataservice.APIURL+'/api/toko/toko_all.php').subscribe((result: any) => {
+    this.http.get(this.dataservice.APIURL).subscribe((result: any) => {
         this.ISIapi=result;
         console.log(result)
     })
+
+    // this.http.get(this.dataservice.baseUrl+'/api/customer/customer_all.php').subscribe((result:any)=>{
+
+    // }) 
 
 }
   

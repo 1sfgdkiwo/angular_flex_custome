@@ -1,15 +1,57 @@
 <div fxLayout="row wrap" fxLayoutAlign="center center" >
+ <mat-toolbar class="tlbar" fxShow.xs fxHide> <mat-icon class="arow_back" (click)="gotoMain()">arrow_back</mat-icon>   </mat-toolbar>
   <div fxFlex="80%" fxFlex.md="100" fxFlex.sm="100" fxFlex.xs="100">
+    <div class="cariData" fxlayout="row wrap">
+      <div >Data barang</div> <div class="spacer" ></div>
+
+     
+        <div class="kotakCari" fxFlex="60%">
+          <mat-form-field id="kotaknya" appearance="outline">
+          <mat-icon matPrefix>search</mat-icon>
+          <input matInput type="text" />
+           </mat-form-field> 
+
+        </div>
+        <div class="spacer" ></div>
+     
+
+    </div>
     <mat-card class="mat-elevation-z8">
-        <p>halaman-api works!</p>
+     
+     
         <!-- <ul *ngFor="let dat in ISIapi; let i = index">
             <li>{{dat.doa}}</li>
         </ul> -->
 
-        <mat-list role="list" *ngFor="let dat of ISIapi; let i = index">
-          <mat-list-item role="listitem">{{ dat.kode_toko }} - {{ dat.nama_toko }}</mat-list-item>
+        <!-- <mat-list role="list" *ngFor="let dat of ISIapi; let i = index">
+          <mat-list-item role="listitem">{{ dat.HP }} - {{ dat.nama_customer }}</mat-list-item>
 
-        </mat-list>
+        </mat-list> -->
+
+        <table id="table">
+          
+          <thead>
+            <tr>
+              <th>Kode</th>
+              <th>Nama</th>
+              <th>Kategori</th>
+            
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let dat of ISIapi; let i = index">
+              <td>{{dat.kode_barang}}</td>
+              <td>{{dat.nama_barang}}</td>
+              <td>{{dat.kategori}}</td>
+          
+            </tr>
+
+          </tbody>
+          <tfoot>
+            
+          </tfoot>
+      </table>
+
       </mat-card>
     
        
@@ -18,11 +60,10 @@
     
 </div>
 
-<div fxFlex="50%" fxLayoutAlign="center center" fxFlexFill>
+<!-- <div fxFlex="50%" fxLayoutAlign="center center" fxFlexFill>
   <mat-card class="mat-elevation-z8">
     <mat-form-field appearance="fill">
-      <!-- <mat-label>Favorite food</mat-label> -->
-      <mat-select>
+       <mat-select>
         <mat-option *ngFor="let food of ISIapi" [value]="food.nama_toko">
           {{food.nama_toko}}
         </mat-option>
@@ -30,8 +71,8 @@
     </mat-form-field>
   </mat-card>
 </div>
-</div>
+-->
 
-
+</div> 
 
 

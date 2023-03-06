@@ -1,0 +1,42 @@
+.spacer{
+    flex: 1 1 auto;
+}
+
+.tlbar{
+    background-color: blue;
+}
+.arow_back{
+    color: white;
+    cursor: pointer;
+}
+
+#kotaknya{
+  border-radius: 40px;
+  width: 100%;
+}
+/* awal tabel  */
+table {
+    width: 100%;
+    margin: 20px auto;
+    table-layout: auto;
+  
+  }
+  
+  .fixed {
+    table-layout: fixed;
+  }
+  
+  table,
+  td,
+  th {
+    border-collapse: collapse;
+  }
+  
+  th,
+  td {
+    padding: 10px;
+    border: solid 1px;
+    text-align: center;
+    border-color: blue;
+  }
+/* akhir tabel  */

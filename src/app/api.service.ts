@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class APIService {
   public baseUrl =  "http://localhost/php_db_satufokus";
-  public APIURL = "https://satufokus.com/php_db_bsa_dp";
+  public APIURL = "http://localhost/php_db_bsa/api/barang_all.php";
   // ISIapi: any;
 
   constructor(public http:HttpClient) { }

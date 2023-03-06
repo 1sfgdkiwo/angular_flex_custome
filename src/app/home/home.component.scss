@@ -35,26 +35,27 @@
     position: fixed;
 }
 
+// menu desktop awal
 .navigation{
     z-index: 10;
     position: relative;
-    /* background-color: rgb(28, 59, 236); */
     right:50px;
-    /* font-weight: 600; */
 }
 
 .navigation li {
     list-style: none;
 }
+
  .navigation li a {
     display: inline-block;
     color: blue;
-    /* font-family: 'Poppins',sans-serif; */
     font-size: 24px;
     font-weight: 400;
     text-decoration: none;
     margin-left: 40px;
 }
+// menu desktop akhir
+
 .content_kiri{
     // width:100% ;
     background: yellow;
@@ -121,11 +122,12 @@ height: 100%;
 // .wadah_art{
 //     padding: auto;
 // }
-.judul{
+.judul {
     height: 30px;
-background-color: aquamarine;
-border-radius: 40px;
-text-align: center;
+    background-color: aquamarine;
+    border-radius: 40px;
+    text-align: center;
+
 }
 .content{
     height: 50px;
@@ -171,37 +173,52 @@ text-align: center;
     top: -4px;
     }
 
-.wadah_menu_mobil{
-    z-index: 100;
-    position: fixed;
-    right:0%;
-    width: 100%;
-    // height:100px;
-  
-}
-.close_menu{
-    right:-350px;
-}
+    .wadah_menuMobile{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background-color:black;
+    }
+
+    .wadah_menuMobile a{
+        color:white;
+    }
+
+    .tombol_X{
+        right:3%;
+        position: fixed;
+        z-index: 100;
+        color:white;
+    }
+
+// start menu_mobil
+// .wadah_menu_mobil {
+//     display: flex;
+//     flex-direction: column;
+
+//     z-index: 100;
+//     position: fixed;
+//     width: 100%;
+//     height: 100%;
+//     margin: auto;
+//     background-color: rgb(165, 203, 228);
+// }
+// .close_menu{
+//     right:-305px;
+// }
+  // end menu_mobil
+    
 .content_kiri{
 
-    padding: 5PX;
+    padding: 5px;
     margin-top: 50px;
     
 }
 
 
-.menu_list{
-    z-index: 100;
-    right:9%;
-    /* top:100px; */
-
-    height:100%;
-    background-color:rgb(165, 203, 228);
-    /* background-image: linear-gradient(to top,blue, white);  */
-}
-
 .wadah_art{
     margin-top:35px;
+    height: 400px;
 }
 .picture{
     height: 450px;

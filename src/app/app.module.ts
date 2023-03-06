@@ -7,6 +7,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { HomeComponent } from './home/home.component';
 
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
 import {  MatMenuModule } from '@angular/material/menu';
 import {  MatIconModule } from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
@@ -14,6 +16,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatListModule} from '@angular/material/list'; 
 import {MatChipsModule} from '@angular/material/chips';
 import {MatSelectModule} from '@angular/material/select';
+import {MatToolbarModule} from '@angular/material/toolbar'; 
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
@@ -28,7 +31,7 @@ import { HalamanAPIComponent } from './halaman-api/halaman-api.component';
   ],
   imports: [
     BrowserModule,HttpClientModule,
-    AppRoutingModule,FlexLayoutModule,MatMenuModule,MatIconModule,MatButtonModule,MatCardModule, BrowserAnimationsModule,MatListModule,MatChipsModule,MatSelectModule
+    AppRoutingModule,FlexLayoutModule,MatMenuModule,MatIconModule,MatButtonModule,MatCardModule, BrowserAnimationsModule,MatListModule,MatChipsModule,MatSelectModule,MatToolbarModule,MatInputModule,MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

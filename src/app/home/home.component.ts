@@ -18,11 +18,14 @@ export class HomeComponent implements OnInit {
   Data: any;
   // hasil: any;
   path_foto:any;
+  path_foto_kosong: string='';
+
 
   constructor( private http: HttpClient, private DataService:APIService,private route:Router  ) { }
 
   ngOnInit(): void {
     this.path_foto=this.DataService.baseUrl+'/upload/'
+this.path_foto_kosong='assets/fotokosong.jpg'
     this.load_post()
   }
 
