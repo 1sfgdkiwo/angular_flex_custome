@@ -1,0 +1,215 @@
+.mat-menu {
+    max-width: none !important;
+  }
+
+.spacer {
+    flex: 1 1 auto;
+  }
+
+
+// header {
+//        height: 80px;
+// }
+
+.header {
+    position: fixed;
+    background-color: rgb(102, 230, 102);
+    border-radius: 10px;
+    // height: 100%;
+    width: 100%;
+    height: 70px;
+    top: 0;
+    z-index: 1;
+}
+
+ .logoCompany{
+    top:10px;
+    padding: 25x;
+    background-color: white;
+}
+
+.logonya{
+    width: 100px;
+    height: 50px;
+    padding: 5px;
+    position: fixed;
+}
+
+.navigation{
+    z-index: 10;
+    position: relative;
+    /* background-color: rgb(28, 59, 236); */
+    right:50px;
+    /* font-weight: 600; */
+}
+
+.navigation li {
+    list-style: none;
+}
+ .navigation li a {
+    display: inline-block;
+    color: blue;
+    /* font-family: 'Poppins',sans-serif; */
+    font-size: 24px;
+    font-weight: 400;
+    text-decoration: none;
+    margin-left: 40px;
+}
+.content_kiri{
+    // width:100% ;
+    background: yellow;
+    height: 500px;
+    
+    padding: 50px;
+    margin-top: 75px;
+    overflow-y: auto;
+    // position: absolute;
+}
+.content_kanan{
+    background: blue;
+    border-radius: 40px;
+    height: 500px;
+    margin-left: 10px;
+    margin-top: 55px;
+}
+.profile{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.logoProfile{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    margin-left: 25px;
+    margin-top: 23px;
+}
+
+.content_bawah{
+    width: 100%;
+    height: 300px;
+    background: red;
+}
+
+.content_bawah{
+    margin-top: 10px;
+}
+
+.content_kiri_dalam_satu,.content_kanan_dalam_satu{
+    background-color: white;
+    padding: 5px;
+height: 100%;
+    // margin: 5px;
+}
+
+.harga{
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+// ::ng-deep .mobileMenu {
+//     width: 100%;
+// }
+
+// ::ng-deep {.mat-menu-panel.mobileMenu { 
+//     // width:500px; 
+//     max-width:fit-content !important;
+// } }
+// .wadah_art{
+//     padding: auto;
+// }
+.judul{
+    height: 30px;
+background-color: aquamarine;
+border-radius: 40px;
+text-align: center;
+}
+.content{
+    height: 50px;
+    text-align: center;
+    overflow-y: hidden;
+}
+
+.picture{
+    height: 300px;
+    // width: 100px;
+    // margin-left: 45px;
+}
+.content_pic{
+    height: 50%;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+  
+
+@media (max-width: 599px) {
+    .content_kiri{
+        margin-top:100px;
+    }
+    .header {
+            position: fixed;
+            background-color: bisque;
+            width: 100%;
+            top: 0;
+            height: 50px;
+        }
+    .logoCompany{
+        position: fixed;
+        top:30px;
+        left:0px;
+    }
+    .logonya{
+    width: 81px;
+    height: 32px;
+    padding: 5px;
+    position: fixed;
+    top: -4px;
+    }
+
+.wadah_menu_mobil{
+    z-index: 100;
+    position: fixed;
+    right:0%;
+    width: 100%;
+    // height:100px;
+  
+}
+.close_menu{
+    right:-350px;
+}
+.content_kiri{
+
+    padding: 5PX;
+    margin-top: 50px;
+    
+}
+
+
+.menu_list{
+    z-index: 100;
+    right:9%;
+    /* top:100px; */
+
+    height:100%;
+    background-color:rgb(165, 203, 228);
+    /* background-image: linear-gradient(to top,blue, white);  */
+}
+
+.wadah_art{
+    margin-top:35px;
+}
+.picture{
+    height: 450px;
+    // width: 100px;
+    // margin-left: 45px;
+}
+
+.profile{ display: none;}
+
+
+}

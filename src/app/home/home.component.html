@@ -1,0 +1,119 @@
+<div  fxLayout="row wrap" fxLayoutAlign="center center">
+    <div class="header" fxFlex="80%" fxFlex.sm="100%" fxFlex.xs="100%" fxLayoutAlign="center">
+        <!-- <header > -->
+            <div class='logoCompany' fxLayoutAlign="start center"><img src="assets/dist/logo/LOGO.png" class="logonya">   </div>
+            <div fxFlex></div>
+          
+                <ul class="navigation" fxLayoutAlign="end center  " fxHide.xs>
+                    <li><a href="#">Home</a></li>
+                    <li ><a [matMenuTriggerFor]="menu">Menu</a></li>
+
+                    <!-- <button mat-button >Menu</button> -->
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item (click)="goToHalamanAPI()">Connect to free API</button>
+                        <button mat-menu-item>Item 2</button>
+                    </mat-menu>
+
+                    <li><a href="#">Service</a></li>
+                </ul>
+       
+              
+                    <button  fxHide fxShow.xs *ngIf="tampilMenuBar==false"  mat-button  (click)="bukaNav()"><mat-icon>more_vert</mat-icon></button>
+                    
+                    <!-- <button mat-button [matMenuTriggerFor]="menu"><mat-icon>more_vert</mat-icon></button>
+                    <mat-menu  #menu="matMenu" class="mobileMenu">
+                        <div >
+                            <button  mat-menu-item>Home</button>
+                            <button mat-menu-item>About</button>
+                            <button mat-menu-item>Service</button>
+                        </div>
+                    </mat-menu> -->
+                    <div class="wadah_menu_mobil" fxHide fxShow.xs>
+                        <div class="menu_list">
+                            <mat-nav-list *ngIf="tampilMenuBar==true">
+                                <button *ngIf="tampilMenuBar==true" class="close_menu" mat-button
+                                    (click)="bukaNav()"><mat-icon>close</mat-icon></button>
+                                <div class="_list">
+                                    <a mat-list-item routerLink="/home" (click)="bukaNav()">
+                                        <mat-icon>home</mat-icon> <span class="nav-caption">Home</span>
+                                    </a>
+                                    <a mat-list-item (click)="bukaNav()">
+                                        <mat-icon>assignment_ind</mat-icon> <span class="nav-caption">
+                                            login</span>
+                                    </a>
+                                    <a mat-list-item routerLink="#" (click)="bukaNav()">
+                                        <mat-icon>account_balance</mat-icon><span class="nav-caption">Account Actions</span>
+                                    </a>
+                    
+                                </div>
+                    
+                            </mat-nav-list>
+                        </div>
+                    </div>
+
+    
+        <!-- </header> -->
+
+        
+        
+    </div>
+    <!-- <div  fxFlex="80%" fxFlex.sm="100%" fxFlex.xs="100%"> -->
+
+        <div class="content_kiri" fxFlex="60%" fxFlex.sm="100%" fxFlex.xs="100%" fxLayout="row wrap" fxLayoutGap="16px grid">
+            <!-- <div class="content_kiri_dalam_satu"  > -->
+                <div  *ngFor="let dat of Data;let i=index" fxFlex="33" fxFlex.sm="100" fxFlex.xs="100"   fxFlexLayoutAlign="center center" >
+                    <!-- <mat-card    -->
+                    <!-- >  -->
+                    <mat-card class="wadah_art mat-elevation-z8">
+                        <div class="judul" fxFlexLayoutAlign="center center">{{dat.kode_materi}}</div>
+                        <div class="content">
+                            {{dat.nama_materi}}
+                        </div>
+                        <div class="picture">
+                    
+                            <img class="content_pic" src={{path_foto+dat.link_foto}}>
+
+                            <div  class="harga">Rp. {{dat.harga}}</div>
+                        </div>
+                        
+                    </mat-card>
+                
+                </div>
+               
+
+            <!-- </div> -->
+            <!-- <div class="content_kanan_dalam_satu"  fxFlex="48"  fxFlex.sm="100%" fxFlex.xs="100%" >content_kanan_dalam_satu</div> -->
+            <!-- kiri -->
+        </div>
+
+        
+       
+        <div class="content_kanan" fxLayoutAlign="center center"  fxFlex="20%" fxFlex.sm="100%" fxHide.xs>
+            <div class="profile" ><img src="assets/dist/logo/LOGO.png" class=" logoProfile"> </div>
+        </div>
+        <mat-card mat-elevation-z8 class="content_bawah" fxLayoutAlign="center center" fxFlexFill fxLayoutGap="10px grid" fxFlex="80%" fxFlex.sm="100%" fxFlex.xs="100%">
+            <div fxFlex="30">
+                <mat-card class="mat-elevation-z4">
+                    <p> bawah/footer left</p>
+                </mat-card>
+                
+            </div>
+
+            <div fxFlex="30">
+                <mat-card class="mat-elevation-z4">
+                    <p> bawah/footer middle</p>
+                    <p> bawah/footer middle</p>
+                    <p> bawah/footer middle</p>
+                </mat-card>
+               
+            </div>
+            <div fxFlex="30">
+                <mat-card class="mat-elevation-z4">
+                <p> bawah/footer right</p>
+                </mat-card>
+            </div>
+           
+        </mat-card>
+    <!-- </div> -->
+</div>
+
