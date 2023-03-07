@@ -6,23 +6,24 @@
           
                 <ul class="navigation" fxLayoutAlign="end center  " fxHide.xs >
                     <li><a href="#">Home</a></li>
-                    <li ><a [matMenuTriggerFor]="menu">Menu</a></li>
+                    <!-- <li ><a [matMenuTriggerFor]="menu">Menu</a></li> -->
 
                     <!-- <button mat-button >Menu</button> -->
-                    <mat-menu #menu="matMenu">
+                    <!-- <mat-menu #menu="matMenu">
                         <button mat-menu-item (click)="goToHalamanAPI()">Connect to free API</button>
                         <button mat-menu-item>Item 2</button>
-                    </mat-menu>
-
-                    <li><a href="#"> Service</a></li>
+                    </mat-menu> -->
                     <div class="dropdown">
-                        <button (click)="menuDrop($event)" class="dropbtn">Artikel</button>
+                        <button (click)="menuDrop($event)" class="dropbtn">Menu</button>
                         <div id="myDropdown" class="dropdown-content">
-                            <a href="#marketing">Marketing</a>
-                            <a href="#Front End">Front End</a>
-                            <a href="#Back End">Back End</a>
+                            <a (click)="goToHalamanAPI()">Connect to free API</a>
+                            <a href="#">Item 2</a>
+    
                         </div>
                     </div>
+
+                    <li><a href="#"> Service</a></li>
+
                 </ul>
        
               
@@ -50,33 +51,7 @@
                 </div>
 
 
-                <!-- <button  fxHide fxShow.xs *ngIf="tampilMenuBar==false"  mat-button  (click)="bukaNav()"><mat-icon>more_vert</mat-icon></button> -->
-                    
-                    <!-- menu mobile awal -->
-                    <!-- <div *ngIf="tampilMenuBar==true" class="wadah_menu_mobil" fxHide fxShow.xs>
-                    
-                        <mat-nav-list>
-                    
-                            <button *ngIf="tampilMenuBar==true" class="close_menu" mat-button
-                                (click)="bukaNav()"><mat-icon>close</mat-icon></button>
-                    
-                            <a mat-list-item routerLink="/home" (click)="bukaNav()">
-                                <mat-icon>home</mat-icon> <span class="nav-caption">Home</span>
-                            </a>
-                            <a mat-list-item (click)="goToHalamanAPI()">
-                                <mat-icon>assignment_ind</mat-icon> <span class="nav-caption">
-                                    connect to API</span>
-                            </a>
-                            <a mat-list-item routerLink="#" (click)="bukaNav()">
-                                <mat-icon>account_balance</mat-icon><span class="nav-caption">Service</span>
-                            </a>
-                    
-                        </mat-nav-list>
-                    </div> -->
-                    
-                    <!-- menu mobile akhir -->
-                   
-        <!-- </header> -->
+               
 
         
         
@@ -116,6 +91,7 @@
         <div class="content_kanan" fxLayoutAlign="center center"  fxFlex="20%" fxFlex.sm="100%" fxHide.xs>
             <div class="profile" ><img src="assets/dist/logo/LOGO.png" class=" logoProfile"> </div>
         </div>
+        
         <mat-card mat-elevation-z8 class="content_bawah" fxLayoutAlign="center center"  fxLayoutGap="10px grid" fxFlex="80%" fxFlex.sm="100%" fxFlex.xs="100%" fxLayout="row wrap" >
             <div fxFlex="30" fxFlex.xs="100" >
                 <mat-card class="mat-elevation-z4">
