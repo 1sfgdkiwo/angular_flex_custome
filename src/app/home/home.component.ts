@@ -29,6 +29,46 @@ this.path_foto_kosong='assets/fotokosong.jpg'
     this.load_post()
   }
 
+   menuDrop(event:any) {
+ (<HTMLInputElement>document.getElementById("myDropdown")).classList.toggle("show");
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+
+  menuDropM(event:any) {
+    (<HTMLInputElement>document.getElementById("myDropdownM")).classList.toggle("show");
+       if (!event.target.matches('.dropbtnM')) {
+         var dropdowns = document.getElementsByClassName("dropdown-contentM");
+         var i;
+         for (i = 0; i < dropdowns.length; i++) {
+           var openDropdown = dropdowns[i];
+           if (openDropdown.classList.contains('show')) {
+             openDropdown.classList.remove('show');
+           }
+         }
+       }
+     }
+  // window.onclick = function(event) {
+  //   if (!event.target.matches('.dropbtn')) {
+  //     var dropdowns = document.getElementsByClassName("dropdown-content");
+  //     var i;
+  //     for (i = 0; i < dropdowns.length; i++) {
+  //       var openDropdown = dropdowns[i];
+  //       if (openDropdown.classList.contains('show')) {
+  //         openDropdown.classList.remove('show');
+  //       }
+  //     }
+  //   }
+  // } 
+
   goToHalamanAPI(){
     this.route.navigate(['halaman-api'])
   }

@@ -15,6 +15,14 @@
                     </mat-menu>
 
                     <li><a href="#"> Service</a></li>
+                    <div class="dropdown">
+                        <button (click)="menuDrop($event)" class="dropbtn">Artikel</button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="#marketing">Marketing</a>
+                            <a href="#Front End">Front End</a>
+                            <a href="#Back End">Back End</a>
+                        </div>
+                    </div>
                 </ul>
        
               
@@ -26,7 +34,17 @@
                         </span></mat-icon></button>
                         <mat-nav-list role="list">
                             <a  href="#" mat-list-item role="listitem">Home</a>
-                            <a mat-list-item role="listitem" (click)="goToHalamanAPI()" >Connect to free API</a>
+                            <!-- <a  href="#" mat-list-item role="listitem">Menu</a> -->
+                            <div class="dropdownM">
+                                <button (click)="menuDropM($event)" class="dropbtnM">Menu</button>
+                                <div id="myDropdownM" class="dropdown-contentM">
+                                    <a (click)="goToHalamanAPI()">Connect to free API</a>
+                                    <a href="#">Item 2</a>
+  
+                         
+                                </div>
+                            </div>
+                            <!-- <a mat-list-item role="listitem" (click)="goToHalamanAPI()" >Connect to free API</a> -->
                             <a mat-list-item role="listitem">Service</a>
                         </mat-nav-list >
                 </div>

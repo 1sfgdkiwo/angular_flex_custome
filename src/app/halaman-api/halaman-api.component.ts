@@ -17,6 +17,9 @@ export class HalamanAPIComponent implements OnInit {
   ngOnInit(): void {
     this.LoadApi()
     // this.dataservice.loadAPI()
+
+    this.RajaOngkir_propinsi()
+
   }
 
   gotoMain() {
@@ -37,5 +40,10 @@ LoadApi(){
 
 }
   
+RajaOngkir_propinsi(){
+  this.http.get(this.dataservice.baseUrl+'/api/JNE/propinsi.php').subscribe((result:any)=>{
+    console.log(result)
+  })
+}
 
 }
